@@ -1,0 +1,5 @@
+[
+  { "name": "Rally", "effect": "atk+5", "duration": 3, "type": "buff", "target": "self" },
+  { "name": "Fortify", "effect": "def+5", "duration": 3, "type": "buff", "target": "self" },
+  { "name": "Weaken", "effect": "atk-5", "duration": 2, "type": "debuff", "target": "enemy" }
+]

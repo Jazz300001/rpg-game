@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Goblin",
+    "hp": 50,
+    "maxHp": 50,
+    "attack": 6,
+    "defense": 2,
+    "speed": 4
+  },
+  {
+    "name": "Orc",
+    "hp": 80,
+    "maxHp": 80,
+    "attack": 8,
+    "defense": 4,
+    "speed": 3
+  },
+  {
+    "name": "Skeleton",
+    "hp": 60,
+    "maxHp": 60,
+    "attack": 7,
+    "defense": 3,
+    "speed": 5
+  },
+  {
+    "name": "Slime",
+    "hp": 40,
+    "maxHp": 40,
+    "attack": 4,
+    "defense": 1,
+    "speed": 2
+  },
+  {
+    "name": "Dark Knight",
+    "hp": 100,
+    "maxHp": 100,
+    "attack": 10,
+    "defense": 6,
+    "speed": 3
+  },
+  {
+    "name": "Witch",
+    "hp": 55,
+    "maxHp": 55,
+    "attack": 9,
+    "defense": 2,
+    "speed": 6
+  },
+  {
+    "name": "Dragonling",
+    "hp": 70,
+    "maxHp": 70,
+    "attack": 11,
+    "defense": 5,
+    "speed": 4
+  }
+]

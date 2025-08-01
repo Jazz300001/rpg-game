@@ -1,0 +1,5 @@
+[
+  { "name": "Fireball", "power": 25, "cost": 5, "type": "magic", "element": "fire" },
+  { "name": "Ice Spike", "power": 20, "cost": 4, "type": "magic", "element": "ice" },
+  { "name": "Lightning Bolt", "power": 30, "cost": 6, "type": "magic", "element": "electric" }
+]

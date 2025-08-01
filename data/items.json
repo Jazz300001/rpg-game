@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Health Potion",
+    "effect": "heal",
+    "value": 30,
+    "description": "Restores 30 HP.",
+    "target": "self"
+  },
+  {
+    "name": "Mana Potion",
+    "effect": "restore-mp",
+    "value": 20,
+    "description": "Restores 20 MP.",
+    "target": "self"
+  },
+  {
+    "name": "Antidote",
+    "effect": "cure",
+    "description": "Cures poison status.",
+    "target": "self"
+  },
+  {
+    "name": "Strength Elixir",
+    "effect": "buff",
+    "duration": 3,
+    "description": "Increases attack for 3 turns.",
+    "target": "self"
+  }
+]
