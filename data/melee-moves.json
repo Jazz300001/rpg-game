@@ -1,5 +1,0 @@
-[
-  { "name": "Slash", "power": 15, "type": "melee", "element": "none" },
-  { "name": "Pierce", "power": 18, "type": "melee", "element": "none" },
-  { "name": "Heavy Swing", "power": 25, "type": "melee", "element": "none" }
-]

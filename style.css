@@ -25,3 +25,19 @@ button {
   border: 1px solid #0f0;
   cursor: pointer;
 }
+#battle-scene {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px dashed #0f0;
+  white-space: pre;
+}
+#battle-scene img {
+  width: 150px;
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid #0f0;
+  background-color: #000;
+}
+

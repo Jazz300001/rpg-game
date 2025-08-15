@@ -12,13 +12,20 @@
     <div id="enemy-stats"></div>
     <div id="log"></div>
     <div id="action-buttons">
-      <button>Attack</button>
-      <button>Magic</button>
+      <button data-type="attack">Attack</button>
+      <button data-type="magic">Magic</button>
       <button>Item</button>
       <button>Defend</button>
       <button id="cont" hidden>Continue...</button>
     </div>
+
+    <div id="moves"></div>
   </div>
+  <div id="battle-scene">
+    <img id="player-sprite" src="assets/player.jpg" alt="Player" >
+    <img id="enemy-sprite" src="assets/enemy.jpg" alt="Enemy" >
+  </div>
+
   <script type="module" src="game.js"></script>
 </body>
 </html>

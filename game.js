@@ -1,6 +1,8 @@
 import { player } from './engine/player.js';
 import { getRandomEnemy } from './engine/enemy.js';
 import { createFight } from './engine/fightLogic.js'
+import { meleeMoves, magicMoves } from './engine/moves.js';
+import { asciiSprites } from "./assets/asciiSprites.js";
 
 const logEl = document.getElementById('log');
 const contBtn = document.getElementById('cont');
@@ -18,16 +20,34 @@ export function log(message) {
 
 function setupEventListeners() {
   actionButtons.querySelectorAll('button').forEach(btn => {
-    const move = btn.textContent.toLowerCase();
-
-    if (move === 'continue...') return;
-
     btn.addEventListener('click', () => {
-      if (handleMove) handleMove(move);
+      const type = btn.dataset.type;
+      if (type === 'attack') {
+        showMoveOptions(meleeMoves);
+      } else if (type === 'magic') {
+        showMoveOptions(magicMoves);
+      }
     });
   });
-
   contBtn.addEventListener('click', startFight);
+}
+
+function showMoveOptions(moves) {
+  const moveList = document.getElementById('moves');
+  if(!moveList) {
+    console.log('im geekin');
+  }
+  moveList.innerHTML = '';
+  moves.forEach((move) => {
+    const btn = document.createElement('button');
+    btn.textContent = move.name;
+    btn.addEventListener('click', () => {
+      handleMove(move.name);
+      moveList.innerHTML = '';
+    });
+    moveList.appendChild(btn);
+    console.log(moveList)
+  });
 }
 
 function startFight() {
@@ -36,6 +56,7 @@ function startFight() {
   log(`A wild ${enemy.name} appears!`);
   enemy.hp = enemy.maxHp;
   handleMove = createFight(enemy, moveOn);
+  document.getElementById('enemy-sprite').src = `assets/${enemy.name.toLowerCase()}.jpg`;
 }
 
 function moveOn() {
@@ -46,11 +67,11 @@ function moveOn() {
 
 function renderStats() {
   document.getElementById('player-stats').textContent =
-      `Player HP: ${player.hp}/${player.maxHp}`;
+      `Player HP: ${player.hp}/${player.maxHp} | MP: ${player.mp}`;
   document.getElementById('enemy-stats').textContent =
       enemy ? `${enemy.name} HP: ${enemy.hp}/${enemy.maxHp}` : '';
 }
-
+document.getElementById('player-sprite').src = `assets/player.jpg`;
 setupEventListeners();
 startFight();
 setInterval(renderStats, 100);
